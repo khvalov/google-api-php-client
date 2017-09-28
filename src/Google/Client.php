@@ -779,7 +779,7 @@ class Google_Client
         $this->config['application_name']
         . " " . self::USER_AGENT_SUFFIX
         . $this->getLibraryVersion()
-    );
+    )->withHeader('X-GOOG-API-FORMAT-VERSION',2);
 
     // call the authorize method
     // this is where most of the grunt work is done
